@@ -1,0 +1,22 @@
+{
+  "url": "https://example.com",
+  "name": "ぼうけんのしょ",
+  "viewport": "width=device-width",
+  "description": "ゲームのルールをまとめていきます",
+  "keywords": "",
+  "lang": "ja",
+  "locale": "ja_JP",
+  "siteImage": "/ogp.png",
+  "fbAppId": "",
+  "fbAdmins": "",
+  "twitterCard": "summary_large_image",
+  "twitterSite": "",
+  "/": {
+    "name": "トップページ",
+    "description": "トップページの概要",
+    "keywords": "",
+    "ogp": "",
+    "canonical": "",
+    "alternate": ""
+  }
+}
