@@ -13,7 +13,7 @@ const postcss = require('gulp-postcss')
 const postcssSyntax = require('postcss-scss')
 const autoprefixer = require('autoprefixer')
 const cmq = require('postcss-combine-media-query')
-const stylelint = require('stylelint')
+// const stylelint = require('stylelint')
 
 // Image
 const imagemin = require('gulp-imagemin')
@@ -175,15 +175,15 @@ const htmlAll = gulp.series(pugAll, reload)
  * .scss -> .css
  */
 function sass() {
-  const lintPlugins = [stylelint()]
+  // const lintPlugins = [stylelint()]
   return gulp
     .src(src.sass.file)
     .pipe(plumber({ errorHandler: notify.onError('Error: <%= error %>') }))
-    .pipe(
-      postcss(lintPlugins, {
-        syntax: postcssSyntax,
-      })
-    )
+    // .pipe(
+    //   postcss(lintPlugins, {
+    //     syntax: postcssSyntax,
+    //   })
+    // )
     .pipe(sassGlob())
     .pipe(
       gulpSass({

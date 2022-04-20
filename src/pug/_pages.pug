@@ -5,7 +5,17 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title #{title} | ぼうけんのしょ
+    include /_include/_css
   body
     include /_include/_header
-    h1=title
+
+    .pages
+      .container
+        h1=title
+        
+        each item in faq
+          dl
+            dt=item.question
+            dd!=item.answer
+      
     include /_include/_footer

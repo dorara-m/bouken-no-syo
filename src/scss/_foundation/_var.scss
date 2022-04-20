@@ -10,3 +10,12 @@
   // Base font-size ％で指定するとブラウザ設定のフォントサイズ切り替えに対応できる
   --font-size: 62.5%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

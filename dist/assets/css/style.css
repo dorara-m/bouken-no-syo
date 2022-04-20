@@ -183,15 +183,91 @@ html {
   --font-size: 62.5%;
 }
 
-h1 {
-  color: var(--color-main);
-  font-size: 3rem;
+* {
+  box-sizing: border-box;
 }
-h1 span {
-  color: blue;
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  max-width: 1040px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+header {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+header a {
+  padding-left: 20px;
+}
+header .btn {
+  background: #111;
+  width: 40px;
+  height: 100%;
+}
+
+.pages {
+  padding: 30px 0;
+}
+.pages h1 {
+  font-size: 22px;
+  margin-bottom: 2rem;
+}
+.pages dl {
+  margin-bottom: 2rem;
+}
+.pages dl dt {
+  font-size: 18px;
+  font-weight: bold;
+}
+.pages dl dd {
+  font-size: 14px;
+  padding: 20px 0;
+}
+
+.p-top {
+  padding: 50px 0;
+}
+.p-top h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.p-top p {
+  font-size: 2rem;
+}
+.p-top ul {
+  margin-top: 5rem;
+  display: flex;
+}
+.p-top ul li {
+  list-style: none;
+}
+.p-top ul li img {
+  width: 100%;
 }
 @media screen and (min-width: 740px) {
-  h1 {
-    font-size: 5rem;
+  .p-top ul li {
+    flex-basis: 33.3%;
   }
 }

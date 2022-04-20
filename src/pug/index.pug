@@ -5,13 +5,14 @@ block css
 block js
 
 block body
-  main
-    h1 ぼうけんのしょ
-    p ゲームのルールをまとめていきます
-    ul
-      each item in cmsData
-        li
-          a(href=`/${item.id}`)
-            img(src=item.eyecatch.url, alt="")
-            h2=item.title
+  main.p-top
+    .container
+      h1 ぼうけんのしょ
+      p ゲームのルールをまとめていきます。
+      ul
+        each item in cmsData
+          li
+            a(href=`/${item.id}`)
+              img(src=item.eyecatch.url, alt="")
+              h2=item.title
 
