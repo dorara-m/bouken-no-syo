@@ -12,10 +12,12 @@ html(lang="en")
     .pages
       .container
         h1=title
-        
+        p=kana
+
         each item in faq
           dl
-            dt=item.question
+            dt
+              h2=item.question
             dd!=item.answer
       
     include /_include/_footer

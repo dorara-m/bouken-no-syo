@@ -337,3 +337,11 @@ exports.default = gulp.series(
   gulp.parallel(js, image, copy),
   watch
 )
+
+// build
+exports.build = gulp.series(
+  pug,
+  pugPagesFunc,
+  sass,
+  gulp.parallel(js, image, copy),
+)
