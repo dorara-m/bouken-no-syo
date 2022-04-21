@@ -3,6 +3,11 @@ if site[directory].ogp
 else
   - var ogp= site.siteImage;
 
+if site[directory].description
+  - var disc= site[directory].description;
+else
+  - var disc= site.description;
+
 meta(charset='UTF-8')
 meta(http-equiv='X-UA-Compatible' content='IE=edge')
 meta(name='viewport', content=site.viewport)
@@ -14,7 +19,7 @@ if site[directory].keywords
 else if site.keywords
   meta(name='keywords', content=site.keywords)
 
-meta(name='description', content=site[directory].description)
+meta(name='description', content=disc)
 
 if site.twitterSite
   meta(name='twitter:site', content=site.twitterSite)
@@ -22,7 +27,7 @@ if site.twitterSite
 meta(name='twitter:card', content=site.twitterCard)
 meta(name='twitter:image', content=site.url + ogp)
 meta(name='twitter:url', content=site.url + directory)
-meta(name='twitter:description', content=site[directory].description)
+meta(name='twitter:description', content=disc)
 meta(name='twitter:title', content=site[directory].name)
 
 if site.fbAppId
@@ -30,7 +35,7 @@ if site.fbAppId
 else if site.fbAdmins
   meta(property="fb:admins" content=site.fbAdmins)
 
-meta(property='og:description', content=site[directory].description)
+meta(property='og:description', content=disc)
 meta(property='og:site_name', content=site.name)
 meta(property='og:locale', content=site.locale)
 meta(property='og:type', content=type)

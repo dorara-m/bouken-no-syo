@@ -2,7 +2,7 @@
   "url": "https://example.com",
   "name": "ぼうけんのしょ",
   "viewport": "width=device-width",
-  "description": "ゲームのルールをまとめていきます",
+  "description": "ゲームのルールをまとめていきます。",
   "keywords": "",
   "lang": "ja",
   "locale": "ja_JP",
@@ -13,7 +13,6 @@
   "twitterSite": "",
   "/": {
     "name": "トップページ",
-    "description": "トップページの概要",
     "keywords": "",
     "ogp": "",
     "canonical": "",

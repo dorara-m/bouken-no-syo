@@ -193,7 +193,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
+  width: 100%;
   padding-right: 20px;
   padding-left: 20px;
   max-width: 1040px;
@@ -229,14 +234,37 @@ header .btn {
 }
 
 .pages {
-  padding: 30px 0 100px;
+  padding: 0 0 100px;
 }
-.pages h1 {
-  font-size: 22px;
+.pages .mv {
+  height: 150px;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
 }
-.pages p {
+.pages .mv::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.pages .mv .text {
+  position: relative;
+}
+.pages .mv h1 {
+  font-size: 32px;
+}
+.pages .mv p {
   font-size: 12px;
-  margin-bottom: 2rem;
 }
 .pages dl {
   margin-bottom: 2rem;
@@ -283,6 +311,15 @@ header .btn {
   width: 100%;
 }
 @media screen and (min-width: 740px) {
+  .pages .mv {
+    height: 300px;
+  }
+  .pages .mv h1 {
+    font-size: 42px;
+  }
+  .pages .mv p {
+    font-size: 16px;
+  }
   .p-top ul li {
     flex-basis: 33.3%;
   }

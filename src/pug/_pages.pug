@@ -10,10 +10,12 @@ html(lang="en")
     include /_include/_header
 
     .pages
-      .container
-        h1=title
-        p=kana
+      .mv(style=`background-image: url(${eyecatch.url})`)
+        .container.text
+          h1=title
+          p=kana
 
+      .container
         each item in faq
           dl
             dt
