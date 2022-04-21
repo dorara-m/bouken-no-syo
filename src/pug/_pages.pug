@@ -11,9 +11,13 @@ html(lang="en")
 
     .pages
       .mv(style=`background-image: url(${eyecatch.url})`)
-        .container.text
-          h1=title
-          p=kana
+        .container
+          .text
+            h1=title
+            p=kana
+          ul.tag
+            each item in tags
+              li=item.label
 
       .container
         each item in faq

@@ -11,8 +11,6 @@
     margin-bottom: 40px;
     background-size: cover;
     background-position: center center;
-    display: flex;
-    align-items: center;
     &::before {
       content: "";
       display: block;
@@ -26,21 +24,45 @@
     @include mq() {
       height: 300px;
     }
-    .text {
+    .container {
       position: relative;
-    }
-    h1 {
-      font-size: 32px;
-      @include mq() {
-        font-size: 42px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .text {
+        h1 {
+          font-size: 32px;
+          @include mq() {
+            font-size: 42px;
+          }
+        }
+        p {
+          font-size: 12px;
+          @include mq() {
+            font-size: 16px;
+          }
+        }
+      }
+      .tag {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        list-style: none;
+        display: flex;
+        li {
+          border: 1px solid #fff;
+          padding: 5px 7px;
+          border-radius: 10px;
+          @include mq() {
+            font-size: 14px;
+          }
+          + li {
+            margin-left: 10px;
+          }
+        }
       }
     }
-    p {
-      font-size: 12px;
-      @include mq() {
-        font-size: 16px;
-      }
-    }
+
   }
 
   dl {
@@ -50,12 +72,19 @@
       font-weight: bold;
     }
     dd {
-      padding: 20px 0;
+      padding: 10px 0;
       p {
         font-size: 14px;
       }
+      a {
+        color: chocolate;
+        text-decoration: underline;
+      }
       img {
-        max-width: 100%;
+        width: 100%;
+        @include mq() {
+          max-width: 600px;
+        }
       }
       h3 {
         font-size: 16px;

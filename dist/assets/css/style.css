@@ -244,8 +244,6 @@ header .btn {
   margin-bottom: 40px;
   background-size: cover;
   background-position: center center;
-  display: flex;
-  align-items: center;
 }
 .pages .mv::before {
   content: "";
@@ -257,14 +255,32 @@ header .btn {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.pages .mv .text {
+.pages .mv .container {
   position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-.pages .mv h1 {
+.pages .mv .container .text h1 {
   font-size: 32px;
 }
-.pages .mv p {
+.pages .mv .container .text p {
   font-size: 12px;
+}
+.pages .mv .container .tag {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  list-style: none;
+  display: flex;
+}
+.pages .mv .container .tag li {
+  border: 1px solid #fff;
+  padding: 5px 7px;
+  border-radius: 10px;
+}
+.pages .mv .container .tag li + li {
+  margin-left: 10px;
 }
 .pages dl {
   margin-bottom: 2rem;
@@ -274,13 +290,17 @@ header .btn {
   font-weight: bold;
 }
 .pages dl dd {
-  padding: 20px 0;
+  padding: 10px 0;
 }
 .pages dl dd p {
   font-size: 14px;
 }
+.pages dl dd a {
+  color: chocolate;
+  text-decoration: underline;
+}
 .pages dl dd img {
-  max-width: 100%;
+  width: 100%;
 }
 .pages dl dd h3 {
   font-size: 16px;
@@ -314,11 +334,17 @@ header .btn {
   .pages .mv {
     height: 300px;
   }
-  .pages .mv h1 {
+  .pages .mv .container .text h1 {
     font-size: 42px;
   }
-  .pages .mv p {
+  .pages .mv .container .text p {
     font-size: 16px;
+  }
+  .pages .mv .container .tag li {
+    font-size: 14px;
+  }
+  .pages dl dd img {
+    max-width: 600px;
   }
   .p-top ul li {
     flex-basis: 33.3%;
