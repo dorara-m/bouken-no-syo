@@ -335,9 +335,6 @@ header .btn {
 .p-top ul li h2 {
   display: none;
 }
-.p-top ul li img {
-  height: 100%;
-}
 @media screen and (min-width: 740px) {
   .pages .mv {
     height: 300px;
